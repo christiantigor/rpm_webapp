@@ -130,7 +130,7 @@
 		</section>
 
 		<!-- Main content -->
-		<section class="content" ng-init="initMain()">
+		<section class="content">
 
 			<!-- Small boxes (Stat box) -->
 			<div class="row">
@@ -231,54 +231,10 @@
 							<h3 class="box-title">Heat Map</h3>
 						</div><!-- /.box-header -->
 						<div class="box-body no-padding">
-							<leaflet width="100%" height="300px" center="center" defaults="defaults" layers="layers" maxBounds="maxBounds"></leaflet>
+							<leaflet width="100%" height="300px" center="center" default="defaults" layers="layers" maxBounds="maxBounds"></leaflet>
 						</div><!-- /.box-body -->
 					</div><!-- /.box -->
 					
-					<!-- Energy chart -->
-					<div class="box box-warning">
-						<div class="box-header">
-							<i class="fa fa-bar-chart-o"></i>
-							<h3 class="box-title">Energy Chart</h3>
-						</div><!-- /.box-header -->
-						<div class="box-body no-padding">
-							<div id="chartEnergy"></div>
-						</div><!-- /.box-body -->
-					</div><!-- /.box -->
-					
-					<!-- Temp Hum chart -->
-					<div class="box box-danger">
-						<div class="box-header">
-							<i class="fa fa-bar-chart-o"></i>
-							<h3 class="box-title">Temperature & Humidity Chart</h3>
-						</div><!-- /.box-header -->
-						<div class="box-body no-padding">
-							<div id="chartTempHum"></div>
-						</div><!-- /.box-body -->
-					</div><!-- /.box -->
-					
-					<!-- Equipment list -->
-					<div class="box box-info">
-						<div class="box-header">
-							<i class="fa fa-list"></i>
-							<h3 class="box-title">Equipment List</h3>
-						</div><!-- /.box-header -->
-						<div class="box-body">
-							<table ng-table="tableParams" show-filter="true" class="table">
-							<tr ng-repeat="s in $data">
-								<td style="text-align:left" data-title="'Id'" sortable="'id'" filter="{ 'id': 'text' }">
-									<small>{{s.id}}</small>
-								</td>
-								<td style="text-align:left" data-title="'Name'" sortable="'name'" filter="{ 'name': 'text' }">
-									<small>{{s.name}}</small>
-								</td>
-								<td style="text-align:left" data-title="'Status'" sortable="'status'" filter="{ 'status': 'text' }">
-									<small>{{s.status}}</small>
-								</td>
-							</tr>
-						</table>
-						</div><!-- /.box-body -->
-					</div><!-- /.box -->
 					
 					<!-- Box (with bar chart) -->
 					<div class="box box-danger" id="loading-example">

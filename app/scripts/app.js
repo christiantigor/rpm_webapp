@@ -15,7 +15,11 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'leaflet-directive',
+    'd3',
+    'c3',
+    'ngTable'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -31,3 +35,7 @@ angular
         redirectTo: '/'
       });
   });
+
+//setup dependency injection
+angular.module('d3',[]);
+angular.module('c3',['d3']);
